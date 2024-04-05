@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+  <meta charset=”UTF-8”>
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+  <title>Notification Example</title>
+  <style>
+    .notification {
+      Position: fixed;
+      Top: 20px;
+      Right: 20px;
+      Background-color: #ffcc00; /* Yellow background */
+      Color: #333; /* Dark text color */
+      Padding: 10px; /* Add some padding */
+      Border-radius: 5px; /* Rounded corners */
+      Box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    }
+  </style>
+</head>
+<body>
+  <button onclick=”showNotification()”>Show Notification</button>
+  <script>
+    Function showNotification() {
+      Const notification = document.createElement(‘div’);
+      Notification.classList.add(‘notification’);
+      Notification.textContent = ‘This is a notification!’;
+      Document.body.appendChild(notification);
+
+      // Automatically remove the notification after 3 seconds
+      setTimeout(() => {
+        document.body.removeChild(notification);
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
